@@ -25,5 +25,20 @@
 }
 
 .sub_head_text {
-  @apply font-normal text-3xl leading-10 text-black md:text-4xl font-garamond;
+  @apply font-normal text-3xl leading-10 text-black md:text-4xl;
+}
+
+.btn {
+  padding: 2rem;
+  background-color: #100a42;
+  width: 250px;
+  height: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #100a42;
+  border-radius: 10px;
+  font-size: small;
+  margin-bottom: 5px;
 }

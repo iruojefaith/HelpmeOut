@@ -11,8 +11,8 @@ const Features = () => {
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 '>
         <div className=' gap-2'>
-          {features.map((item) => (
-            <div className=' flex flex-row gap-3'>
+          {features.map((item, id) => (
+            <div className=' flex flex-row gap-3' key={id}>
               <span className='flex justify-center align-middle my-3'>
                 <Image
                   src={item.image}

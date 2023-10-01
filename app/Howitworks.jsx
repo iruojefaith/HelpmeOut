@@ -5,8 +5,8 @@ const Howitworks = () => {
   return (
     <div className=' mb-16 p-4 md:px-24 py-8'>
       <div className='contain mt-8 grid grid-cols-1 sm:grid-cols-3 gap-10 '>
-        {collections.map((item) => (
-          <div className='flex flex-col justify-center align-middle text-center'>
+        {collections.map((item, id) => (
+          <div className='flex flex-col justify-center align-middle text-center' key={id}>
             <span className='flex justify-center align-middle md:my-3'>
               <Image
                 src={item.icon}

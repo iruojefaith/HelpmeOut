@@ -1,7 +1,14 @@
 import Image from "next/image";
 import Button from "./components/Button";
+import HelpmeOut from './HelpmeOut';
+import {saveAs} from "file-saver";
+
 
 const Header = () => {
+ const downloadHelpmeOut = () => {
+        saveAs(HelpmeOut, "HelpmeOut");
+    }
+
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:px-24 py-16'>
       <div className='flex flex-col sm:p-4'>
@@ -12,7 +19,7 @@ const Header = () => {
           Help your friends and loved ones by creating and sending videos on how
           to get things done on a website.
         </p>
-        <Button text='install HelpmeOut &rarr;' />
+        <Button text='install HelpmeOut &rarr;' onClick={downloadHelpmeOut} />
       </div>
       <div className='flex flex-row gap-3 mt-12 md:mt-0 justify-center align-middle'>
         <span className='flex flex-col gap-3 justify-center align-middle'>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./components/Button";
-import HelpmeOut from './HelpmeOut';
+
 import {saveAs} from "file-saver";
 
 

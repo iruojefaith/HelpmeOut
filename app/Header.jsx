@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "./components/Button";
 import axios from 'axios'
 import {saveAs} from "file-saver";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -24,7 +25,9 @@ const Header = () => {
           Help your friends and loved ones by creating and sending videos on how
           to get things done on a website.
         </p>
-        <Button className="btn" text='install HelpmeOut &rarr;' onClick={()=>handleClick('https://drive.google.com/drive/folders/1eDHj8-zv-9wLou9lMe8SYcSlQGVla2kI?usp=sharing')} />
+        <Link className="btn" href='https://drive.google.com/file/d/12469b0G0FtFVtsWB0q1eQMhuY7UYQQJu/view?usp=sharing'>
+           <Button  text='install HelpmeOut &rarr;' />
+        </Link>
       </div>
       <div className='flex flex-row gap-3 mt-12 md:mt-0 justify-center align-middle'>
         <span className='flex flex-col gap-3 justify-center align-middle'>

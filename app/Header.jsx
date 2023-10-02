@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Button from "./components/Button";
-
+import axios from 'axios'
 import {saveAs} from "file-saver";
 
 
 const Header = () => {
- const downloadHelpmeOut = () => {
-        saveAs(HelpmeOut, "HelpmeOut");
-    }
+  const handleClick = (url, filename) => {
+    axios.get(url, {
+      responseType: 'blob',
+    })
+    .then((res) => {
+      saveAs(res.data, filename)
+    })
+  }
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:px-24 py-16'>
@@ -19,7 +24,7 @@ const Header = () => {
           Help your friends and loved ones by creating and sending videos on how
           to get things done on a website.
         </p>
-        <Button text='install HelpmeOut &rarr;' onClick={downloadHelpmeOut} />
+        <Button className="btn" text='install HelpmeOut &rarr;' onClick={()=>handleClick('https://drive.google.com/drive/folders/1eDHj8-zv-9wLou9lMe8SYcSlQGVla2kI?usp=sharing')} />
       </div>
       <div className='flex flex-row gap-3 mt-12 md:mt-0 justify-center align-middle'>
         <span className='flex flex-col gap-3 justify-center align-middle'>
@@ -43,7 +48,7 @@ const Header = () => {
             <Image
               src='/grid136a.png'
               alt='newcollections Img'
-              className='relative -left-7'
+              className='relative -left-7 '
               width={200}
               height={200}
               priority
@@ -53,7 +58,7 @@ const Header = () => {
         <span>
           <Image
             src='/header-2.png'
-            alt='newcollections Img'
+            alt='header img2'
             className='absolute z-30'
             width={200}
             height={200}
@@ -61,7 +66,7 @@ const Header = () => {
           />
           <Image
             src='/grid136.png'
-            alt='newcollections Img'
+            alt='header img2'
             className='relative -top-8 sm:left-8 left-4'
             width={200}
             height={200}

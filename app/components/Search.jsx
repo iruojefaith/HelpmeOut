@@ -1,4 +1,4 @@
-const Search = () => {
+const Search = ({placeholder,}) => {
   return (
     <div>
       <div className='max-w-md mx-auto text-[#777575]'>
@@ -19,11 +19,11 @@ const Search = () => {
               />
             </svg>
           </div>
-          <input
+          <input 
             className='peer h-full w-[50rem] outline-none text-sm  px-2 bg-transparent text-center'
             type='text'
             id='search'
-            placeholder='Search for a particular video'
+            placeholder={placeholder}
           />
         </div>
       </div>

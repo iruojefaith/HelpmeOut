@@ -13,7 +13,7 @@ const Header = () => {
           <h2 className='font-bold text-2xl'>Hello&#44;</h2>
           <p>Here are your recorded videos</p>
         </span>
-        <Search />
+        <Search placeholder='Search for a particular video'/>
       </div>
     </div>
   );

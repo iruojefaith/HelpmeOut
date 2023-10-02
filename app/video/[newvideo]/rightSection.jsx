@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RightSection = () => {
+const RightSection = ({src}) => {
   const base = `https://chrome-extension-o1tz.onrender.com/upload/${src}.webm`;
   return (
     <div> <div className='border-[#B6B3C6] rounded-2xl border p-4 '>
